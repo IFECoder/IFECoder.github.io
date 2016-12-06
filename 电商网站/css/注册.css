@@ -1,0 +1,199 @@
+/*公用*/
+.comWidth{
+	width: 1000px;
+	margin:0px auto;
+}
+.leftArea{
+	float: left;
+}
+.rightArea{
+	float: right;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+
+/* 头部 */
+/* logoBar */
+.loginWidth{
+	width: 460px;
+	margin:0px auto;
+}
+.logoBar{
+	height:85px;
+	background-color: #1D7AD9;
+}
+.logo{
+	padding-top: 12px;
+}
+.welcome{
+	display:inline-block;
+	font-size: 22px;
+	font-family: "微软雅黑";
+	color: #FFF;
+	padding-top: 18px;
+	padding-left: 12px;
+}
+
+/* 主体 */
+.main_body{
+	border: 1px solid #E1E1E1;
+	position: relative;
+	width: 630px;
+	margin: 15px auto;
+	margin-bottom: 157px;
+}
+.reg{
+	padding: 40px 85px 40px;
+}
+.reg a:hover{
+	text-decoration: underline;
+}
+.reg_item{
+	float: left;
+	display: inline-block;
+	width: 89px;
+	text-align: right;
+	padding-right: 18px;
+	font-size: 14px;
+	color: #999999;
+}
+.reg_item em{
+	font-style: normal;
+	color: red;
+	padding-right: 5px;
+}
+.login_lis li{
+	height: 67px;
+	line-height: 32px;
+}
+.reg_input{
+	float: left;
+	width: 268px;
+	height: 32px;
+	line-height: 32px\9;
+	border: 1px solid #CCCCCC;
+	text-indent: 5px;
+}
+.name{
+	background: url(../images/icon/login_name.jpg) right center no-repeat;
+}
+.password{
+	background: url(../images/icon/login_password.jpg) right center no-repeat;
+}
+.login_lis .read{
+	padding-left: 100px;
+	height: 28px;
+}
+.read input,.read label{
+	vertical-align: middle;
+}
+.read a{
+	color: #005AA0;
+}
+.reg_btn{
+	margin-left: 66px;
+	width:302px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	border: 1px solid #D0E4F9;
+	background: url(../images/btn_bg.jpg) left top repeat-x;
+	margin-top: 29px;
+}
+.login_link{
+	position: absolute;
+	right: 42px;
+	width: 115px;
+	height: 31px;
+	line-height: 31px;
+	display: inline-block;
+	background-color: #7CBE56;
+	text-align: center;
+}
+.login_link input{
+	color: #FFF;
+	font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*底部*/
+.footer{
+	background-color: #D4D4D4;
+	height: 173px;
+	text-align: center;
+	margin-top: 40px;
+	padding-top: 50px;
+}
+.footer a{
+	color: #000;
+}
+.footer a:hover{
+	color: #8C6900;
+}
+.footer p{
+	font-family: "宋体";
+	line-height: 24px;
+}
+.footer .bottom_logo{
+	margin-top: 30px;
+}
+.bottom_logo a{
+	margin: 0 12px;
+}
+.footer span{
+	margin:0 5px;
+}

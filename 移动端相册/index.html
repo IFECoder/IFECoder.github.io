@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,target-densitydpi=medium-dpi" /> 
+	<title>移动端相册</title>
+<style>
+	body,ul{
+		margin: 0;
+		padding: 0;
+		font-size:0.1rem;
+		color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	a{
+		text-decoration:none;
+		color: #fff;
+	}
+	#page{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		overflow: hidden;
+		background: #000;
+	}
+	#header{
+		width: 100%;
+		height: 0.4rem;
+		background: -webkit-linear-gradient(top,#292929,#1e1e1e); 
+        background: -moz-linear-gradient(top,#292929,#1e1e1e);
+        background: linear-gradient(top,#292929,#1e1e1e); 
+		text-align: center;
+		line-height:0.4rem;
+		border-top:2px solid #353535;
+		border-bottom:2px solid #232323;
+		box-sizing:border-box;
+	}
+	.btn{ 
+		position: absolute;
+		top: 0.05rem;
+		width: 0.4rem;
+		height:0.25rem;
+		line-height: 0.25rem;
+		border:1px solid #000;
+		border-radius: 5px;
+		right: 10px;
+	}
+	.btn:nth-of-type(1){
+		left: 10px;
+		display: none;
+	}
+	#footer{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0.6rem;
+		background: -webkit-linear-gradient(top,#292929,#1e1e1e); 
+        background: -moz-linear-gradient(top,#292929,#1e1e1e);
+        background: linear-gradient(top,#292929,#1e1e1e); 
+		line-height:0.6rem;
+	}
+	#footer a{
+		width: 50%;
+		float: left;
+		text-align: center;
+		box-sizing:border-box;
+	}
+	#footer a.active{
+		background:-webkit-linear-gradient(top,#101010,#070707);
+		background:-moz-linear-gradient(top,#101010,#070707);
+		background:linear-gradient(top,#101010,#070707);
+		border-color:#0e0e0e;
+	}
+	#footer a:nth-of-type(1){
+		border-right:1px solid #222222;
+	} 
+	#footer a:nth-of-type(2){
+		border-left:1px solid #222222;
+	} 
+	#content{
+		width: 100%;
+		position: absolute;
+		top: 0.4rem;
+		bottom: 0.6rem;
+		overflow:auto;
+	}
+	#picList{
+		position: relative;
+	}
+	#picList li{
+		width: 1rem;
+		height: 1rem;
+		position: absolute;
+		border: 1px solid #000;
+		box-sizing:border-box;
+		transition: 0.7s;
+	}
+</style>
+<script>
+	window.onload=function () {
+		document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/3+'px';
+		var data=[];
+		for (var i = 1; i <= 16; i++) {
+			data.push('img/'+i+'.jpg');
+		}
+		creat();
+		function creat(){//创建相册节点等
+			var oPicList = document.getElementById('picList');
+			var aBtn = document.getElementsByClassName('btn');
+			var liHtml = '';
+			var delLi=[];
+			for (var i = 0; i < data.length; i++) {
+				liHtml+='<li style="background:url(img/'+(i+1)+'.jpg) no-repeat; "></li>';
+			}
+			oPicList.innerHTML=liHtml;
+			var ali = oPicList.getElementsByTagName('li');
+			var onOFf = true;
+			aBtn[1].addEventListener('touchend',selectedBtn,false);
+			function selectedBtn() {//选择按钮按下
+				if (onOFf) {
+					aBtn[1].innerHTML='取消';
+					for (var i = 0; i < ali.length; i++) {
+						ali[i].index=i;
+						ali[i].addEventListener('touchend',selectedImg,false);
+					}
+				} else {
+					aBtn[1].innerHTML='选择';
+					aBtn[0].style.display='none';
+					for (var i = 0; i < ali.length; i++) {
+						ali[i].style.opacity=1;
+						ali[i].removeEventListener('touchend',selectedImg,false);
+					}
+				}
+				delLi.length=0;
+				onOFf=!onOFf;
+			}
+			function selectedImg() {//选中图片
+				aBtn[0].style.display='block';
+				this.style.opacity=0.3;
+				delLi.push(this.index);
+			}
+			aBtn[0].addEventListener('touchend',selectedDel,false);
+			function selectedDel() {//删除按钮按下-删除图片
+				delLi=delLi.sort(function (a,b) {
+					return a-b;
+				})
+				while(delLi.length){
+					var del=delLi.pop();
+					console.log(del,ali[del]);
+					oPicList.removeChild(ali[del]);
+				}
+				selectedBtn();
+				produceImg();
+			}
+			produceImg();
+			function produceImg() {//生成图片
+				for (var i = 0; i < ali.length; i++) {
+					ali[i].style.left=i%3+'rem';
+					ali[i].style.top=Math.floor(i/3)+'rem';
+				}
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<article id="page">
+		<header id="header">
+			<a href="javascrpt:;" class="btn">删除</a> 相机相册 
+			<a href="javascrpt:;" class="btn">选择</a>
+		</header>
+		<section id="content">
+			<ul id="picList">
+				
+			</ul>
+		</section>
+		<footer id="footer">
+			<a href="javascrpt:;" class="active">相机相册</a>
+			<a href="javascrpt:;">所有相册</a>
+		</footer>
+	</article>
+</body>
+</html>

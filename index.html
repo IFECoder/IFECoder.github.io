@@ -1,1 +1,240 @@
-hahahhahahah....
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>个人作品</title>
+	<link rel="stylesheet" type="text/css" href="resume/css/main.css">
+</head>
+<body>
+<div id="main">
+
+	<!-- 导航条 -->
+	<div id="header">
+		<div id="arrow" class="arrow"></div>
+		<div class="headerBar">
+			<a class="logo" href="#"><img src="resume/img/logo.png" /></a>
+			<ul id="nav">
+				<li>
+					<a href="#home">
+					<div class="up"><img src="resume/img/home_gruen.png" /></div>
+					<div><img src="resume/img/home.png" /></div>
+					</a>
+				</li>
+				<li>	
+					<a href="#skill">
+					<div class="up">Skill</div>
+					<div>Skill</div>
+					</a>
+				</li>
+				<li>
+					<a href="#project">
+					<div class="up">Project</div>
+					<div>Project</div>
+					</a>
+				</li>
+				<li>
+					<a href="#experience">
+					<div class="up">Experience</div>
+					<div>Experience</div>
+					</a>
+				</li>
+				<li>
+					<a href="#contact">
+					<div class="up">Contact</div>
+					<div>Contact</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 主体内容 -->
+	<div id="content">
+		<!-- 侧边栏菜单 -->		
+    	<ul id="menu">
+    		<li class="active"><a href="#home"></a><span>首页</span></a></li>
+    		<li><a href="#skill"><span>专业技能</span></a></li>
+    		<li><a href="#project"><span>项目展示</span></a></li>
+    		<li><a href="#experience"><span>我的经历</span></a></li>
+    		<li><a href="#contact"><span>联系我</span></a></li>
+    	</ul>
+    	<!-- 主体内容列表 -->
+		<ul id="list_ul" class="list_ul">
+			<li id="list_home" class="listli">
+	        	<div id="home_content" class="listDiv">
+	               <div id="info">
+	               		<div id="circle">
+	                		<img src="resume/img/me.png">
+		                </div>
+		                <h1 id="name">于 &nbsp;&nbsp;佩</h1>
+		                <p id="logion">沉着淡定地迎接每一次挑战，不怕困难有多难，只怕失去一颗拼搏上进的心
+		                <span></span></p>
+		                <h4>前端工程师</h4>
+		                <p>mamu88@163.com</p>
+		                <div id="git_res">
+		                	<a target="_blank" href="https://github.com/IFECoder" class="github">GitHub</a>
+		                	<a target="_blank" href="前端简历--于佩.pdf" class="resume">在线简历</a>
+		                </div>
+	               </div>
+	        	</div>
+	        </li>
+			<li id="list_Skill" class="listli">
+				<div class="listDiv">
+		            <div id="skill" class="wrap">
+		            	<h3 id="skill_show" class="title">专业技能</h3>
+		            	<div class="left">
+		            		<div class="skillLang">
+		            			<div class="item" id="item_{{id}}">
+		            				<h3>
+		            					<span class="big_cil"></span>
+		            					<span>{{skillTitle}}</span>
+		            				</h3>
+		            				<ul class="itemList">
+		            					
+		            					{{skillTooltip}}
+		            				</ul>
+		            			</div>
+		            		</div>
+		            	</div>
+		            	<div class="right">
+		            		<div id="container"></div>
+		            	</div>
+		            </div>	
+		        </div>
+	        </li>
+			<li id="list_Project" class="listli">
+				<div class="listDiv">
+					<div id="box" class="wrap"> 
+						<h3 id="project_show" class="title">项目展示</h3>
+						<ul>
+							<li>
+								<img {{src}}="{{projectImg}}">
+								<div class="text">
+									<p class="p1">{{projectName}}</p>
+									<p class="p2">{{projectExplain}}</p>
+									<a href='{{projectWebsite}}' target="_blank" class="demo_link">
+				                        demo                  
+				                	</a>
+								</div>
+							</li>
+						</ul>
+						<div id="demo_info">
+		                    <p>这是我的部分demo。</p>
+		                    <p>更多精彩，敬请移步<a target="_blank" href="https://github.com/IFECoder" class="githubs">github</a>。</p>
+		                </div>
+					</div>
+				</div>
+			</li>
+			<li id="list_Experience" class="listli">
+	        	<div class="listDiv">
+				    <div id="exprience" class="wrap">
+				    	<h3 id="exprience_show" class="title">我的经历</h3>
+				    	<p class="exprience_tit">在2014年实习期间，我开始了web前端自学生涯！</p>
+				    	<div id="show">
+							<div id="experience">
+								<div class="exp_item">
+									<dl>
+						                <dt>桂林电子科技大学信息科技学院</dt>
+						                <dd class="exp_time">2012年9月~2016年6月</dd>
+						                <dd>软件工程专业</dd>
+						                <dd>在校期间学习软件工程方面的基础知识</dd>
+						                <dd>在2014年开始了前端学习之路</dd>
+						                <dd>在校期间做过一些静态的页面及特效</dd>
+						                <dd>同时也接触到了移动端的开发，并做了一些小demo</dd>
+						            </dl>
+
+								</div>
+								<div class="exp_item">
+									<dl>
+					                    <dt>桂林远望智能通信科技有限公司</dt>
+					                    <dd class="exp_time">2014年6月~2014年9月</dd>
+					                    <dd>项目部(实习)</dd>
+					                    <dd>负责公司网站的维护及几个企业公司的官网开发</dd>
+					                    <dd>在实习期间利用闲暇时间巩固前端基础知识</dd>
+					                    <dd>在工作之余提升自己原生JS的编码能力</dd>
+					                </dl>
+
+								</div>
+								<div class="exp_item">
+									<dl>
+					                    <dt>深圳市深蓝软件有限公司</dt>
+					                    <dd class="exp_time">2015年7月~2016年9月</dd>
+					                    <dd>前端技术部</dd>
+					                    <dd>负责快速构建高质量移动app页面及对企业公司官网的开发</dd>
+					                    <dd>使用原生JS+jQuery进行前端开发</dd>
+					                    <dd>使用git进行版本控制</dd>
+					                </dl>
+
+								</div>
+							</div>
+							<img src="resume/img/left.png" alt="">
+							<img src="resume/img/right.png" alt="">
+						</div>
+						<div id="exprience_tab">
+							<div class="linear"></div>
+							<div class="experience_wrap">
+								<ul id="btn">
+									<li class="selc" title="2012年9月~2016年6月"></li>
+									<li title="2014年6月~2014年9月"></li>
+									<li title="2015年7月~2016年9月"></li>
+								</ul>
+							</div>
+						</div>
+				    </div>
+	        	</div>
+	        </li>
+			<li id="list_Contact" class="listli">
+		        <div class="listDiv">
+		            <div id="contact" class="wrap">
+		            	<h3 id="contact_show" class="title">联系我</h3>
+		            	<div id="contact_left">
+		            		<div id="contact_head">
+								<div id="contact_head1" class="b_to_t">目标 执行 效率 尝试</div>
+			                    <div id="contact_head2">
+			                    	<span>target</span>
+			                        <span>perform </span>
+			                        <span>efficiency</span>
+			                        <span>try</span>
+			                    </div>
+			                </div>
+			                <div id="contact_info">
+		                    	<ul>
+		                    		<li>学习是一件令人愉悦的过程</li>
+		                    		<li>前端更贴近用户，这种体验非常美妙</li>
+		                    		<li>热爱前端，也热爱一切美好的事物</li>
+		                    		<li>在前端的学习过程中会有不一样的收获</li>
+		                    		<li>请带上我吧，让我们一起发现与探索未知的前端世界！</li>
+		                    	</ul>
+		                	</div>
+		            	</div>
+		            	<div id="contact_right">
+		            		<div id="contact_me">
+		                        <h3>我的信息/My message</h3>
+		                        <span></span>
+
+		                        <p>姓名：<strong>于佩</strong></p>
+
+		                        <p>电话：<strong>15513059079</strong></p>
+
+		                        <p>QQ：<strong>245024598</strong></p>
+
+		                        <p>邮箱: <strong>mamu88@163.com</strong></p>
+
+		                        <p>地址: 北京市</p>
+		                    </div>
+		            	</div>
+		            </div>
+		        </div>
+		    </li>
+		</ul>
+	</div>
+</div>
+<script src="resume/js/jquery.js"></script>
+<script src="resume/js/main.js"></script>
+<script src="resume/js/data.js"></script>
+<script src='resume/js/highcharts.js'></script>
+<script src="resume/js/skill.js"></script>
+<script src="resume/js/project.js"></script>
+<script src="resume/js/experience.js"></script>
+</body>
+</html>

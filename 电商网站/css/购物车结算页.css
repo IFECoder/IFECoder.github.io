@@ -1,0 +1,369 @@
+/*公用*/
+.comWidth{
+	width: 1000px;
+	margin:0px auto;
+}
+.leftArea{
+	float: left;
+}
+.rightArea{
+	float: right;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+
+/* 头部 */
+.topBar{
+	background-color: #F7F7F7;
+	height: 31px;
+	line-height: 31px;
+}
+.collection{
+	background: url(../images/icon/collection.jpg) no-repeat left center;
+	padding-left: 19px;
+	font-weight: bold;
+}
+.topBar a:hover{
+	color: red;
+}
+/* logoBar */
+.logoBar{
+	height:85px;
+	background-color: #1D7AD9;
+}
+.logo{
+	padding-left: 38px;
+	padding-top: 12px;
+
+}
+.stepBox{
+	float: right;
+	margin-right: -76px;
+}
+.step{
+	margin-top: 22px;
+	width: 397px;
+	height: 19px;
+	background: url(../images/icon/step.png) left top no-repeat;
+}
+.stepBox .step_lis li{
+	float: left;
+	line-height: 26px;
+	padding-right: 100px;
+	color: #FFF;
+}
+.stepBox .step_lis .active{
+	color: #F3E402;
+	font-weight: bold;
+}
+
+/* 主体 */
+/* 收货信息 */
+.mainBody{
+	margin-top: 12px;
+	background-color: #FFF;
+}
+.shop_item{
+	border: 1px solid #CCCCCC;
+	padding-bottom: 16px; 
+	margin-bottom: 20px;
+}
+.shop_item .shop_info{
+	height: 31px;
+	line-height: 31px;
+	text-indent:11px;
+	font-size: 17px; 
+	background:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAAfAAEDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgEI/8QAGBABAAMBAAAAAAAAAAAAAAAAAAECE1L/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A07pfqQABBAf/2Q==) left top repeat-x;
+	border-bottom: 1px solid #E3E3E3; 
+	font-family:"微软雅黑" ;
+	font-weight: normal;
+}
+.shop_item .shop_lis{
+	padding: 25px 25px 0 25px;
+}
+.shop_lis li{
+	line-height: 36px;
+}
+.shop_lis .select em{
+	color: #FF0000;
+	font-style: normal;
+}
+.shop_lis .select{
+	color: #434343;
+	width: 77px;
+	display: inline-block;
+}
+.standard_txt{
+	width: 110px;
+}
+.long_txt{
+	width: 390px;
+}
+.phone,.input{
+	vertical-align: middle;
+}
+.input{
+	height: 22px;
+	line-height: 22px;
+	border: 1px solid #C2C2C2;
+	color: #C2C2C2;
+	text-indent: 10px;
+	margin-left: -6px;
+}
+._input{
+	margin-left: 4px;
+	margin-right: 4px;
+	color: #434343;
+}
+.short_txt{
+	width: 62px;
+	color: #434343;
+	margin-right: 4px;
+}
+.receive_btn{
+	width: 112px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid #3784ED;
+	background-color: #4694FE;
+	color: #FFF;
+	margin-top: 14px;
+}
+.address h3{
+	display: inline-block;
+	font-weight: normal;
+	font-size: 12px;
+	height: 10px;
+	line-height: 10px;
+	float: left;
+	padding: 6px 27px 5px 10px;
+	border: 1px solid #BFBFBF; 
+	background: url(../images/icon/address.jpg) 84px center no-repeat;
+}
+.address{
+	margin-top: 4px;
+	background-color: #FFF;
+	position: relative;
+}
+.address_list{
+	display: none;
+	padding-left: 10px;
+	position: absolute;
+	width: 89%;
+	top: 22px;
+	left: 0;
+	z-index: 4;
+	border: 1px solid #BFBFBF;
+	background-color: #FFF;
+}
+/* 支付方式 */
+.pay_lis li{
+	line-height: 42px;
+	height: 42px;
+	margin-left: 30px;
+} 
+.pay_lis input,.pay_lis label{
+	vertical-align: middle;
+}
+.wechat{
+	position: absolute;
+	padding-left: 34px;
+	background: url(../images/icon/wechat.png) left center no-repeat;
+}
+.pay_lis label{
+	margin-right: 12px;
+}
+/* 发票信息 */
+.need{
+	margin-top: 14px;
+	margin-left: 31px;
+	margin-bottom: 18px;
+}
+.need input,.need label{
+	vertical-align: middle;
+}
+.invoice_lis{
+	padding-left: 36px;
+}
+.invoice_lis li{
+	line-height: 45px;
+}
+.invoice_lis .select em{
+	color: red;
+	font-style: normal;
+	padding-right: 4px;
+}
+#invoice0{
+	border: 1px solid #ABADB3;
+	width: 108px;
+	height: 17px;
+}
+#invoice1{
+	border: 1px solid #ABADB3;
+	width: 49px;
+	height: 17px;
+}
+.invoice_bg{
+	background: url(../images/icon/invoice_bg.png) right top no-repeat;
+}
+.invoice_txt{
+	width: 137px;
+	height: 22px;
+	line-height: 22px;
+	border: 1px solid #C2C2C2;
+	color: #888888;
+	text-indent: 5px;
+}
+.ok,.cancel{
+	width: 66px;
+	height: 24px;
+}
+.ok_cancel{
+	padding-left: 10px;
+}
+.ok{
+	border: 1px solid #3784ED;
+	background-color: #3D8AF4;
+	color: #FFF;
+}
+.cancel{
+	border: 1px solid #CCCCCC;
+	background-color: #F6F6F6;
+	color: #666666;
+}
+/* 送货清单 */
+.update_car{
+	font-size: 12px;
+	font-family: "宋体";
+	color: #3377FF;
+	float: right;
+	margin-right: 33px;
+}
+.update_car:hover{
+	text-decoration: underline;
+}
+.delivery_lis{
+	padding-left: 30px;
+	line-height: 34px;
+	border-bottom: 1px solid #E6E6E6;
+}
+.delivery_lis li{
+	float: left;
+	width: 112px;
+}
+.delivery_lis .name{
+	width:435px;
+}
+.delivery_lis .subtotal{
+	width: 123px;
+}
+.delivery_lis .name .goods_info{
+	margin-left:-9px;
+}
+.goods_info img{
+	width: 99px;
+	height: 99px;
+}
+.goods_decr{
+	height: 99px;
+}
+.goods_decr .gift{
+	padding-top: 20px;
+}
+.goods_decr .goods_tit:hover{
+	text-decoration: underline;
+}
+.delivery_lis .money{
+	color: red;
+	font-weight: bold;
+}
+.shop_item .message{
+	line-height: 40px;
+	padding-left: 30px;
+	color: #3377FF;
+}
+.shop_item .tips{
+	line-height: 40px;
+	padding-left: 30px;
+	margin-top: 8px;
+	color: red;
+}
+.tips .icon{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url(../images/icon/icon.jpg) left top no-repeat;
+}
+.no_goods p{
+	line-height: 28px;
+}
+.no_goods_txt{
+	color: red;
+	font-weight: bold;
+	margin-left: -4px;
+}
+.no_bor{
+	border: none;
+}
+/* 订单结算 */
+.settlement{
+	margin-right: 25px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+.settlement em{
+	font-style: normal;
+	font-size: 14px;
+	color: #929292;
+}
+.settlement .money{
+	font-size: 24px;
+	color: #EE0000;
+	font-weight: bold;
+	font-family: verdana;
+}
+.settlement_btn{
+	width: 165px;
+	height: 33px;
+	background-color: #E50007;
+	margin-top: 16px;
+	font-size: 18px;
+	color: #FFF;
+	font-family: "微软雅黑";
+	_margin-right: -25px;
+}
+
+/*底部*/
+.footer{
+	background-color: #D4D4D4;
+	height: 173px;
+	text-align: center;
+	margin-top: 40px;
+	padding-top: 50px;
+}
+.footer a{
+	color: #000;
+}
+.footer a:hover{
+	color: #8C6900;
+}
+.footer p{
+	font-family: "宋体";
+	line-height: 24px;
+}
+.footer .bottom_logo{
+	margin-top: 30px;
+}
+.bottom_logo a{
+	margin: 0 12px;
+}
+.footer span{
+	margin:0 5px;
+}
